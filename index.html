@@ -18,9 +18,20 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap"
       rel="stylesheet"
     />
+    <script src="data/jobs.js"></script>
     <script src="scripts/app.js" defer></script>
   </head>
   <body>
+    <div id="job-modal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="modal-title">
+      <div class="modal__backdrop" data-modal-close></div>
+      <div class="modal__content">
+        <header class="modal__header">
+          <h2 class="modal__title" id="modal-title">Job details</h2>
+          <button type="button" class="modal__close" data-modal-close aria-label="Close">×</button>
+        </header>
+        <div class="modal__body" id="modal-body"></div>
+      </div>
+    </div>
     <div class="app-root">
       <main class="app-shell">
         <!-- Top Bar -->
