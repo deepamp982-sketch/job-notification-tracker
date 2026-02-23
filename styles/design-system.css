@@ -101,6 +101,7 @@ button {
 /* Top Bar */
 
 .top-bar {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -211,6 +212,13 @@ button {
 .context-header__subtitle {
   margin: 0;
   color: rgba(17, 17, 17, 0.7);
+}
+
+/* Landing CTA */
+.landing-cta {
+  max-width: 720px;
+  padding-top: var(--space-2);
+  padding-bottom: var(--space-1);
 }
 
 /* Workspace layout */
