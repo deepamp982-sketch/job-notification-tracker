@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Job Notification App – Design System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles/design-system.css" />
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com"
+    />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="app-root">
+      <main class="app-shell">
+        <!-- Top Bar -->
+        <header class="top-bar">
+          <div class="top-bar__brand">Job Notification App</div>
+
+          <div class="top-bar__progress">
+            <span class="top-bar__progress-label">Step</span>
+            <span class="top-bar__progress-value">1 / 4</span>
+          </div>
+
+          <div class="top-bar__status top-bar__status--not-started">
+            Not Started
+          </div>
+        </header>
+
+        <!-- Context Header -->
+        <section class="context-header">
+          <h1 class="context-header__title">
+            Define how job notifications should behave.
+          </h1>
+          <p class="context-header__subtitle">
+            Configure the foundations once so every future workflow inherits the same calm, predictable notification experience.
+          </p>
+        </section>
+
+        <!-- Workspace -->
+        <section class="workspace">
+          <!-- Primary Workspace (70%) -->
+          <div class="workspace__primary">
+            <!-- Example card: configuration form -->
+            <article class="card">
+              <header class="card__header">
+                <div class="stack-vertical-sm">
+                  <h2 class="card__title">Notification defaults</h2>
+                  <p class="card__subtitle">
+                    Establish a single source of truth for how job alerts are delivered.
+                  </p>
+                </div>
+
+                <span class="badge badge--accent">Design System Example</span>
+              </header>
+
+              <div class="card__section form-grid">
+                <div class="field">
+                  <label class="field__label" for="frequency">Alert frequency</label>
+                  <select id="frequency" class="select">
+                    <option>Daily digest</option>
+                    <option>Twice per week</option>
+                    <option>Weekly summary</option>
+                  </select>
+                  <p class="field__hint">
+                    Choose how often users see grouped job notifications.
+                  </p>
+                </div>
+
+                <div class="field">
+                  <label class="field__label" for="channel">Primary channel</label>
+                  <select id="channel" class="select">
+                    <option>Email</option>
+                    <option>In-app only</option>
+                    <option>Mobile push</option>
+                  </select>
+                  <p class="field__hint">
+                    You can layer additional channels later if needed.
+                  </p>
+                </div>
+              </div>
+
+              <div class="card__section">
+                <div class="field">
+                  <label class="field__label" for="summary-line">Summary line</label>
+                  <input
+                    id="summary-line"
+                    class="input"
+                    type="text"
+                    placeholder="For roles that match your preferences"
+                  />
+                  <p class="field__hint">
+                    Keep this clear and factual. It appears at the top of every notification.
+                  </p>
+                </div>
+              </div>
+
+              <footer class="card__section button-row">
+                <button class="btn btn--primary" type="button">Save defaults</button>
+                <button class="btn btn--secondary" type="button">Reset to baseline</button>
+              </footer>
+            </article>
+
+            <!-- Example card: empty state -->
+            <article class="card">
+              <header class="card__header">
+                <div class="stack-vertical-sm">
+                  <h2 class="card__title">Preview: empty state</h2>
+                  <p class="card__subtitle">
+                    How the screen looks before any notifications are configured.
+                  </p>
+                </div>
+              </header>
+
+              <div class="card__section">
+                <div class="state">
+                  <h3 class="state__title">No notification rules yet.</h3>
+                  <p class="state__body">
+                    When someone lands here for the first time, they should understand what will happen once they create a rule.
+                  </p>
+                  <p class="state__body">
+                    Use a clear next step instead of leaving the page blank.
+                  </p>
+                  <div class="state__actions">
+                    <button class="btn btn--primary" type="button">
+                      Create first rule
+                    </button>
+                    <button class="btn btn--ghost" type="button">
+                      Learn how this works
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- Example card: error handling -->
+            <article class="card">
+              <header class="card__header">
+                <div class="stack-vertical-sm">
+                  <h2 class="card__title">Preview: error state</h2>
+                  <p class="card__subtitle">
+                    Clear, actionable guidance instead of blaming the user.
+                  </p>
+                </div>
+                <span class="badge badge--warning">Example</span>
+              </header>
+
+              <div class="card__section">
+                <div class="state state--error">
+                  <h3 class="state__title">We could not save your changes.</h3>
+                  <p class="state__body">
+                    Your connection dropped while we were updating these settings. Your previous notification rules are still active.
+                  </p>
+                  <p class="state__body">
+                    Check your connection, then try again. If this keeps happening, you can download your current rules as a backup before retrying.
+                  </p>
+                  <div class="state__actions">
+                    <button class="btn btn--primary" type="button">
+                      Try saving again
+                    </button>
+                    <button class="btn btn--secondary" type="button">
+                      Download current rules
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <!-- Secondary Panel (30%) -->
+          <aside class="workspace__secondary">
+            <article class="card">
+              <header class="card__section">
+                <h2 class="secondary-panel__title">Step overview</h2>
+                <p class="secondary-panel__body">
+                  Use this panel to keep the intent of the step visible while you work. It should feel like a calm briefing, not marketing copy.
+                </p>
+              </header>
+
+              <section class="card__section">
+                <div class="progress-indicator">
+                  <div class="progress-indicator__bar">
+                    <div class="progress-indicator__fill"></div>
+                  </div>
+                  <span class="text-muted">Approx. 5 minutes</span>
+                </div>
+              </section>
+
+              <section class="card__section">
+                <h3 class="secondary-panel__title">Copyable prompt</h3>
+                <p class="secondary-panel__body">
+                  Use this prompt when you need to explain to a colleague how this step works.
+                </p>
+                <div class="prompt-box">
+                  <div class="prompt-box__label">Prompt</div>
+                  <div class="prompt-box__content">
+Configure the default behaviour for job notifications so every team uses the same baseline. Prioritise clarity over volume: one notification that arrives at the right time is better than several that arrive at random.
+                  </div>
+                  <div class="button-row">
+                    <button class="btn btn--secondary" type="button">
+                      Copy text
+                    </button>
+                  </div>
+                </div>
+              </section>
+            </article>
+
+            <article class="card">
+              <header class="card__section">
+                <h2 class="secondary-panel__title">Design notes</h2>
+              </header>
+              <section class="card__section stack-vertical-sm">
+                <p class="secondary-panel__body">
+                  - Keep language factual and neutral.<br />
+                  - Avoid hype; explain what happens and when.<br />
+                  - Use one primary action per surface when possible.
+                </p>
+              </section>
+            </article>
+          </aside>
+        </section>
+
+        <!-- Proof Footer -->
+        <footer class="proof-footer">
+          <div class="proof-footer__label">Proof checklist</div>
+          <div class="proof-footer__checklist">
+            <div class="proof-footer__item">
+              <div class="proof-footer__box"></div>
+              <span class="proof-footer__label-text">UI Built</span>
+            </div>
+            <div class="proof-footer__item">
+              <div class="proof-footer__box"></div>
+              <span class="proof-footer__label-text">Logic Working</span>
+            </div>
+            <div class="proof-footer__item">
+              <div class="proof-footer__box"></div>
+              <span class="proof-footer__label-text">Test Passed</span>
+            </div>
+            <div class="proof-footer__item">
+              <div class="proof-footer__box"></div>
+              <span class="proof-footer__label-text">Deployed</span>
+            </div>
+          </div>
+        </footer>
+      </main>
+    </div>
+  </body>
+</html>
+

@@ -1,0 +1,11 @@
+{
+  "name": "job-notification-app-design-system",
+  "version": "1.0.0",
+  "description": "Design system foundation for a premium B2C Job Notification App (layout, tokens, components, no product features).",
+  "private": true,
+  "scripts": {
+    "start": "npx serve .",
+    "preview": "npx serve ."
+  }
+}
+
