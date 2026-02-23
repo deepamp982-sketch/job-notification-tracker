@@ -759,6 +759,13 @@ button {
   margin-bottom: var(--space-1);
 }
 
+.job-card__badges {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  flex-shrink: 0;
+}
+
 .job-card__title {
   font-family: var(--font-serif);
   font-size: var(--font-size-body);
@@ -792,9 +799,95 @@ button {
   flex-shrink: 0;
 }
 
+.badge--score {
+  font-weight: 600;
+}
+
+.badge--neutral {
+  border-color: var(--color-border-strong);
+  color: rgba(17, 17, 17, 0.85);
+}
+
+.badge--subtle {
+  border-color: var(--color-border-subtle);
+  color: rgba(17, 17, 17, 0.55);
+  background-color: rgba(17, 17, 17, 0.01);
+}
+
 .btn--sm {
   height: 32px;
   padding: 0 var(--space-2);
   font-size: 12px;
+}
+
+/* =========================
+   Banner + Toggles + Inputs
+   ========================= */
+
+.banner {
+  margin-bottom: var(--space-2);
+}
+
+.toggle-row {
+  margin-top: var(--space-2);
+  padding-top: var(--space-2);
+  border-top: var(--border-width) solid var(--color-border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+  font-size: var(--font-size-small);
+}
+
+.toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.toggle input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--color-accent);
+}
+
+.toggle-hint {
+  white-space: nowrap;
+}
+
+.checklist {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.checklist__item {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-size: var(--font-size-small);
+  color: rgba(17, 17, 17, 0.85);
+}
+
+.checklist__item input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--color-accent);
+}
+
+.range {
+  width: 100%;
+}
+
+.range__meta {
+  margin-top: var(--space-1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: var(--font-size-small);
+}
+
+.range__value {
+  font-weight: 600;
 }
 
